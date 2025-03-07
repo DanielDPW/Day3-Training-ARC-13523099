@@ -1,0 +1,33 @@
+[
+    {
+      "id": 1,
+      "title": "Morning workout",
+      "content": "Jog for 30 minutes",
+      "tags": ["Health", "Fitness"]
+    },
+    {
+      "id": 2,
+      "title": "Read a book",
+      "content": "Finish 2 chapters of mystery novel",
+      "tags": ["Reading", "Relax"]
+    },
+    {
+      "id": 3,
+      "title": "Water plants",
+      "content": "Water the garden in the evening",
+      "tags": ["Home", "Plants"]
+    },
+    {
+      "id": 4,
+      "title": "Call mom",
+      "content": "Check in and have a chat",
+      "tags": ["Family", "Personal"]
+    },
+    {
+      "id": 5,
+      "title": "Buy snacks",
+      "content": "Chips, chocolate, and soda",
+      "tags": ["Shopping", "Food"]
+    }
+  ]
+  
