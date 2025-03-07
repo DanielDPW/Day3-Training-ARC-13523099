@@ -1,9 +1,11 @@
 import express from "express"
 import { readNote, writeNote } from "./data.mjs";
+import cors from "cors"
 
 const app = express();
 const PORT = 3000;
 
+app.use(cors());
 app.use(express.json());
 app.use(express.static("../fe"));
 
@@ -39,7 +41,7 @@ app.post("/notes", async(req, res) => {
 app.put("/notes/:id", async(req, res) => {
     const { title, content } = req.body;
     const data = await readNote();
-    const idx = data.findIndex((note) => note.id == req.params.id);
+    const idx = data.findIndex((note) => note.id == Number(req.params.id));
 
     if (idx === -1) {
         return res.status(404).json({message: "Not Found"});
@@ -53,7 +55,7 @@ app.put("/notes/:id", async(req, res) => {
 
 app.delete("/notes/:id", async(req, res) => {
     let data = await readNote();
-    data = data.filter((note) => note.id != req.params.id);
+    data = data.filter((note) => note.id != Number(req.params.id));
     await writeNote(data);
     res.json({message: "Note Deleted"})
 })
