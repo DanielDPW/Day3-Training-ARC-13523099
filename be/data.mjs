@@ -12,5 +12,5 @@ export async function readNote() {
 }
 
 export async function writeNote(data) {
-    await fs.writeFile(file, JSON.stringify(data, null, 2), "utf-8");
+    await fs.writeFile(file, JSON.stringify(data, null, 4), "utf-8");
 }
